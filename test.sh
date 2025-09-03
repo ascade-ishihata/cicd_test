@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Hello word"
+echo "Hello word 1"
