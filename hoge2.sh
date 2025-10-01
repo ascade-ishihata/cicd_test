@@ -2,8 +2,10 @@
 
 # Run as an unprivileged user.
 
+DEST="/home/ec2-user/cicd_test"
+
 PWD="/usr/bin/pwd"
 WHOAMI="/usr/bin/whoami"
 
-${PWD} >> hoge2.log
-${WHOAMI} >> hoge2.log
+${PWD} >> ${DEST}/hoge2.log
+${WHOAMI} >> ${DEST}/hoge2.log

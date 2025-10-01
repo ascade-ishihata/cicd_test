@@ -18,5 +18,5 @@ ${CHOWN} -R ${USER}:${GROUP} ${DEST}
 ${SU} - ${USER} <<-EOF
 	${CD} ${DEST}
 	${GIT} config --global --add safe.directory ${DEST}
-	./hoge2.sh
+	${DEST}/hoge2.sh
 EOF
