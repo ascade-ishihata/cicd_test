@@ -11,7 +11,6 @@ CD="/usr/bin/cd"
 DATE="/usr/bin/date"
 CHOWN="/usr/bin/chown"
 SU="/usr/bin/su"
-TEE="/usr/bin/tee"
 GIT="/usr/bin/git"
 
 ${CHOWN} -R ${USER}:${GROUP} ${DEST}
@@ -19,5 +18,5 @@ ${CHOWN} -R ${USER}:${GROUP} ${DEST}
 ${SU} - ${USER} <<-EOF
 	${CD} ${DEST}
 	${GIT} config --global --add safe.directory ${DEST}
-	./hoge2.sh | ${TEE} -a hoge2.log
+	./hoge2.sh
 EOF
