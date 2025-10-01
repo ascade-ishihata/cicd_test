@@ -7,7 +7,6 @@ DEST="/home/ec2-user/cicd_test"
 USER="ec2-user"
 GROUP="ec2-user"
 
-CD="/usr/bin/cd"
 CHOWN="/usr/bin/chown"
 SU="/usr/bin/su"
 

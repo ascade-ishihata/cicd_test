@@ -6,6 +6,7 @@ DEST="/home/ec2-user/cicd_test"
 LOG="${DEST}/hoge2.log"
 
 CP="/usr/bin/cp"
+CD="/usr/bin/cd"
 DATE="/usr/bin/date"
 PWD_CMD="/usr/bin/pwd"
 WHOAMI="/usr/bin/whoami"
@@ -16,9 +17,9 @@ NOHUP="/usr/bin/nohup"
 ${CP} /dev/null ${LOG}
 ${CD} ${DEST}
 ${DATE} >> ${LOG}
-${PWD_CMD} >> ${LOG}
-${WHOAMI} >> ${LOG}
-echo ${HOME} >> ${LOG}
+echo "pwd: `${PWD_CMD}`" >> ${LOG}
+echo "whoami: `${WHOAMI}`" >> ${LOG}
+echo "HOME: ${HOME}" >> ${LOG}
 ${GIT} config --global --add safe.directory ${DEST} >> ${LOG}
 
 ${UV} sync >> ${LOG} 2>&1
