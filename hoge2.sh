@@ -9,7 +9,7 @@ CP="/usr/bin/cp"
 CD="/usr/bin/cd"
 DATE="/usr/bin/date"
 PWD_CMD="/usr/bin/pwd"
-WHOAMI="/usr/bin/whoami"
+LS="/usr/bin/ls"
 GIT="/usr/bin/git"
 UV="${HOME}/.local/bin/uv"
 NOHUP="/usr/bin/nohup"
@@ -18,8 +18,7 @@ ${CP} /dev/null ${LOG}
 ${CD} ${DEST}
 ${DATE} >> ${LOG}
 echo "pwd: `${PWD_CMD}`" >> ${LOG}
-echo "whoami: `${WHOAMI}`" >> ${LOG}
-echo "HOME: ${HOME}" >> ${LOG}
+${LS} >> ${LOG}
 ${GIT} config --global --add safe.directory ${DEST} >> ${LOG}
 
 ${UV} sync >> ${LOG} 2>&1
