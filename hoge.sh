@@ -4,18 +4,18 @@
 
 DEST="/home/ec2-user/cicd_test"
 
-UID="ec2-user"
-GID="ec2-user"
+USER="ec2-user"
+GROUP="ec2-user"
 
 CD="/usr/bin/cd"
 DATE="/usr/bin/date"
 CHOWN="/usr/bin/chown"
 SU="/usr/bin/su"
 
-${CHOWN} -R ${UID}:${GID} ${DEST}
+${CHOWN} -R ${USER}:${GROUP} ${DEST}
 
 ${CD} ${DEST}
 
-${SU} - ${UID} <<-EOF
+${SU} - ${USER} <<-EOF
 	./hoge2.sh
 EOF
