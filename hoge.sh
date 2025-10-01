@@ -8,7 +8,6 @@ USER="ec2-user"
 GROUP="ec2-user"
 
 CD="/usr/bin/cd"
-DATE="/usr/bin/date"
 CHOWN="/usr/bin/chown"
 SU="/usr/bin/su"
 

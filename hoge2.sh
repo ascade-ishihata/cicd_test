@@ -6,14 +6,16 @@ DEST="/home/ec2-user/cicd_test"
 LOG="${DEST}/hoge2.log"
 
 CP="/usr/bin/cp"
+DATE="/usr/bin/date"
 PWD_CMD="/usr/bin/pwd"
 WHOAMI="/usr/bin/whoami"
 GIT="/usr/bin/git"
-UV="~/.local/bin/uv"
+UV="${HOME}/.local/bin/uv"
 NOHUP="/usr/bin/nohup"
 
 ${CP} /dev/null ${LOG}
 ${CD} ${DEST}
+${DATE} >> ${LOG}
 ${PWD_CMD} >> ${LOG}
 ${WHOAMI} >> ${LOG}
 echo ${HOME} >> ${LOG}
