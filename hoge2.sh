@@ -15,7 +15,8 @@ UV="${HOME}/.local/bin/uv"
 NOHUP="/usr/bin/nohup"
 
 ${CP} /dev/null ${LOG}
-${CD} ${DEST}
+#${CD} ${DEST}
+cd ${DEST}/
 ${DATE} >> ${LOG}
 echo "pwd: `${PWD_CMD}`" >> ${LOG}
 ${LS} >> ${LOG}
