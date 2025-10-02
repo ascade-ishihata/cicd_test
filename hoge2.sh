@@ -8,7 +8,6 @@ LOG="${DEST}/hoge2.log"
 CP="/usr/bin/cp"
 DATE="/usr/bin/date"
 PWD_CMD="/usr/bin/pwd"
-LS="/usr/bin/ls"
 GIT="/usr/bin/git"
 PKILL="/usr/bin/pkill"
 UV="${HOME}/.local/bin/uv"
@@ -21,8 +20,7 @@ cd ${DEST}/
 
 ${DATE} >> ${LOG}
 echo "pwd: `${PWD_CMD}`" >> ${LOG}
-${LS} >> ${LOG}
-${GIT} config --global --add safe.directory ${DEST} >> ${LOG}
+${GIT} config --global --add safe.directory ${DEST}
 
 ${PKILL} python >> ${LOG} 2>&1
 ${UV} sync >> ${LOG} 2>&1
